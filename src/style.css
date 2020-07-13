@@ -1,0 +1,37 @@
+@tailwind base;
+
+@tailwind components;
+.logo{
+  @apply inline-block h-12 object-contain;
+}
+.btn{
+  @apply block py-3 px-10  rounded-full font-open-sans font-bold shadow-md;
+}
+.btn-white{
+  @apply bg-white text-gray-900;
+}
+.btn-primary{
+  @apply bg-pink-500 text-white;
+}
+.footer_link{
+  @apply inline-block relative;
+}
+.footer_link:hover{
+  @apply opacity-75;
+}
+.footer_link::after{
+  content: '';
+  height: 2px;
+  @apply block absolute bottom-0 left-0 w-0 bg-white transition-all duration-300 origin-center;
+}
+.footer_link:hover::after{
+  @apply w-full;
+}
+.social-logo{
+  @apply flex justify-center items-center h-10 w-10 m-2 fill-current text-white border-2 border-white rounded-full;
+}
+.social-logo:hover{
+  @apply opacity-50;
+}
+
+@tailwind utilities;
